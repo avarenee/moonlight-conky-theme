@@ -1,3 +1,9 @@
+local _name = ""
+
+function conky_name()
+  return _name
+end
+
 function conky_distro()
   local pattern = 'PRETTY_NAME'
   local distro_line = sys_call("cat /etc/os-release | grep " .. pattern, true)
